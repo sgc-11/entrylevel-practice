@@ -1,0 +1,173 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p{
+  font-weight: bold;
+  color: brown;
+  font-size: 20px;
+}
+
+.div-total {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.div-izquierda {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.div-resultados {
+  grid-column: auto; /* Let the grid decide the column */
+}
+
+.div-1, .div-jugadores, .div-resultados {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin: 10px 0;
+  margin-left: 10px;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:active {
+  background-color: aqua;
+  transition: 0.15s;
+  color: black;
+  font-weight: bold;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  .div-total {
+    grid-template-columns: 1fr 1fr; /* Two columns for medium screens */
+  }
+  
+  .div-izquierda {
+    grid-column: 1 / -1; /* Span all columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .div-total {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+  
+  body {
+    padding: 20px 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.75em;
+  }
+  
+  h3 {
+    font-size: 1.25em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  .div-1, .div-jugadores, .div-resultados {
+    background-color: #f0f0f0;
+    color: #213547;
+  }
+}
